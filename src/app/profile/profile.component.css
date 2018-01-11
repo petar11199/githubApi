@@ -1,0 +1,15 @@
+.image{
+    width: 260px;
+    height: 260px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.input{
+    border-radius: 25px !important;
+} 
+li{
+    color: #1e5799;
+}
+*{
+    color: white;
+}

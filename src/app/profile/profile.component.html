@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-4">
+        <h3 class="lead mt-5 mb-3">GitHub user finder!</h3>
+        <div class="input-group mb-5">
+          <input class="form-control input" placeholder="Enter username" (keyup)="searchUser(user)" #user="ngModel" name="user" [(ngModel)]="searchedhUser" type="text">
+        </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="user.value" class="container">
+  <div class="row">
+    <div class="col-lg-3 mb-5">
+        <a href="{{followers.html_url}}"><img class="mr-3 image" src={{followers.avatar_url}} alt="Generic placeholder image"></a>
+        <h4 class="mt-0">{{followers.name}}</h4>
+        <h4 class="mt-0 lead">{{followers.login}}</h4>
+        <hr>
+        <span>{{followers.location}}</span><br>
+        <a href="{{followers.blog}}"><span>{{followers.blog}}</span></a>
+    </div>
+    <div class="col-lg">
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Followers
+          <span class="badge badge-primary badge-pill">{{followers.followers}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Following
+          <span class="badge badge-primary badge-pill">{{followers.following}}</span>
+        </li>
+        <li class="bg-light list-group-item d-flex justify-content-between align-items-center">
+          Public repos
+          <span class="badge badge-secondary badge-pill">{{followers.public_repos}}</span>
+        </li>
+      </ul>
+    </div>
+</div>
+
