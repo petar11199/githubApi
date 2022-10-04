@@ -1,3 +1,6 @@
+**!  OLD PROJECT  !**
+--
+
 Simple GitHub Api user search made with Angular
 
 gitPages - https://petar11199.github.io/githubApi/
